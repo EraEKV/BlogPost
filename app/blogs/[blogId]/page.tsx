@@ -66,18 +66,26 @@ const Blog = () => {
   }
 
   return (
-    <div className="px-4 md:px-6 mx-auto w-[80%] sm:max-w-[400px] lg:max-w-[500px] mb-10 my-6 sm:my-10 md:my-14 lg:my-16">
+    <div className="px-4 md:px-6 mx-auto w-[80%] sm:max-w-[400px] lg:max-w-[500px] my-6 sm:my-10 md:my-14 lg:my-16">
       <article className="prose prose-gray mx-auto">
         <div className="space-y-4 not-prose">
           <h1 className="text-2xl font-extrabold tracking-tight lg:text-3xl mb-4 sm:mb-10">
             {post.title}
           </h1>
 
-          <img
+          {/* <img
             src="https://i.pinimg.com/originals/cc/0a/e4/cc0ae483b7f9f4704a3e9110617366e2.jpg"
             alt="Blog Post Image"
             className="w-full h-30 rounded-lg rounded-tl-lg mb-1"
-          />
+          /> */}
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className=" h-24 w-24 mx-auto  rounded-lg rounded-tl-lg mb-1">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+          </svg>
+          {/* className="w-full h-30 rounded-lg rounded-tl-lg mb-1" */}
+          {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"  className="w-full h-30 rounded-lg rounded-tl-lg mb-1">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+          </svg> */}
+
 
           <div className="flex items-center gap-3 text-gray-700 mx-auto justify-between">
             
