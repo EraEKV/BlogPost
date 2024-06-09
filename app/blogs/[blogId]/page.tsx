@@ -11,7 +11,10 @@ interface Post {
   title: string;
   body: string;
   userId: number;
-  reactions: number;
+  reactions: {
+    likes: number;
+    dislikes: number;
+  };
   views: number[];
   tags: string[];
   username?: string;
