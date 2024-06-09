@@ -21,9 +21,6 @@ interface Post {
 }
 
 
-
-
-
 const Blog = () => {
   const { blogId } = useParams();
   const [post, setPost] = useState<Post | null>(null);

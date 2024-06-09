@@ -1,6 +1,25 @@
 import React from "react";
 import Link from "next/link"
 import Image from "next/image";
+// import { Post } from "./types";
+
+// interface CardProps {
+//   post: Post;
+// }
+
+interface Post {
+  id: number;
+  title: string;
+  body: string;
+  tags: string[];
+  userId: number;
+  reactions: {
+    likes: number;
+    dislikes: number;
+  };
+  views: number[];
+  username?: string;
+}
 
 
 const Card: React.FC<{ post: Post }> = ({ post }) => {

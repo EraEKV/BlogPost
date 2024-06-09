@@ -12,7 +12,15 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
-  const { login, error, token } = useContext(AuthContext);
+
+  const authContext = useContext(AuthContext);
+
+  if (!authContext) {
+    throw new Error('AuthContext must be used within an AuthProvider');
+  }
+  
+  const { login, error, token } = authContext;
+
 
   useEffect(() => {
     if (error) {
@@ -41,11 +49,11 @@ const Login = () => {
     await login(trimmedUsername, trimmedPassword);
   };
 
-  const handleChangeUsername = (e) => {
+  const handleChangeUsername = (e: any) => {
     setUsername(e.target.value.trim());
   };
 
-  const handleChangePassword = (e) => {
+  const handleChangePassword = (e: any) => {
     setPassword(e.target.value.trim());
   };
 
