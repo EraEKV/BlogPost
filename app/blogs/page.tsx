@@ -11,13 +11,15 @@ import Loading from "../components/layout/Loading";
 interface Post {
   id: number;
   title: string;
-  username: string;
+  body: string;
+  tags: string[];
   userId: number;
   reactions: {
     likes: number;
     dislikes: number;
   };
-  views: number;
+  views: number[];
+  username?: string;
 }
 
 interface PostsResponse {
