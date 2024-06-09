@@ -9,8 +9,8 @@ return (
 
         <h1 className="text-3xl font-bold text-rose-500">Oops, something went wrong</h1>
         <p className="text-emerald-500">
-        We're sorry, but an unexpected error has occurred. Please try again later or contact support if the issue
-        persists.
+            We are sorry, but an unexpected error has occurred. Please try again later or contact support if the issue
+            persists.
         </p>
     </div>
     )

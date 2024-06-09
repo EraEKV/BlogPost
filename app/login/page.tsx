@@ -104,7 +104,7 @@ const Login = () => {
         </div>
 
         <div>
-          <p className="mt-6 sm:mt-10 text-base font-medium">Don't even registered? <Link className="underline hover:text-cyan-500" href={`/registration`}>Register Now</Link></p>
+          <p className="mt-6 sm:mt-10 text-base font-medium">Do not registered? <Link className="underline hover:text-cyan-500" href={`/registration`}>Register Now</Link></p>
         </div>
 
         <div className="flex justify-center items-center">
