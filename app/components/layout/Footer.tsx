@@ -1,5 +1,6 @@
 import { SVGProps } from 'react';
 import Link from "next/link"
+import Image from 'next/image';
 
 export default function Component() {
   return (
@@ -8,9 +9,16 @@ export default function Component() {
         <div className="container mx-auto flex flex-col items-center justify-between gap-4 sm:flex-row">
           <div className="flex items-center gap-2">
             <Link href="#" className="flex items-center" prefetch={false}>
-                <img className='w-12' src="https://framerusercontent.com/images/CbSPyXMVIfZHAkc9RBEP7XhXEw.png" alt="logo" />
+                {/* <img className='w-12' src="https://framerusercontent.com/images/CbSPyXMVIfZHAkc9RBEP7XhXEw.png" alt="logo" /> */}
+                {/* <Image
+                  className='w-12' 
+                  src="https://framerusercontent.com/images/CbSPyXMVIfZHAkc9RBEP7XhXEw.png" 
+                  alt="logo" 
+                  width={10}
+                  height={10}
+                ></Image> */}
               
-                <span className="ml-3 md:ml-4 text-white text-xl font-semibold">BlogPost</span>
+                <span className="text-white text-xl font-semibold">BlogPost</span>
             </Link>
           </div>
           <div className="flex items-center gap-4">
