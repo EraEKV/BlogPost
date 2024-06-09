@@ -21,7 +21,6 @@ const Login = () => {
   
   const { login, error, token } = authContext;
 
-
   useEffect(() => {
     if (error) {
       toast.error('User not found', {
@@ -49,11 +48,11 @@ const Login = () => {
     await login(trimmedUsername, trimmedPassword);
   };
 
-  const handleChangeUsername = (e: any) => {
+  const handleChangeUsername = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(e.target.value.trim());
   };
 
-  const handleChangePassword = (e: any) => {
+  const handleChangePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value.trim());
   };
 

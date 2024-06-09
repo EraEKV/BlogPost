@@ -9,8 +9,10 @@ const Navbar = () => {
   const [token, setToken] = useState<string | null>(null);
 
   useEffect(() => {
-    const storedToken = sessionStorage.getItem('token');
-    setToken(storedToken);
+    if (typeof window !== "undefined" && typeof sessionStorage !== "undefined") {
+      const storedToken = sessionStorage.getItem('token');
+      setToken(storedToken);
+    }
   }, []);
 
   const toggleMenu = () => {
@@ -22,8 +24,10 @@ const Navbar = () => {
   };
 
   const handleLogout = () => {
-    sessionStorage.removeItem('token');
-    setToken(null);
+    if (typeof window !== "undefined" && typeof sessionStorage !== "undefined") {
+      sessionStorage.removeItem('token');
+      setToken(null);
+    }
   };
 
   return (
