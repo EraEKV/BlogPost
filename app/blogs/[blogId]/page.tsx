@@ -66,7 +66,7 @@ const Blog = () => {
   }
 
   return (
-    <div className="px-4 md:px-6 mx-auto w-[80%] min-h-screen sm:max-w-[400px] lg:max-w-[500px] mt-6 sm:mt-10 md:mt-14 lg:mt-16">
+    <div className="px-4 mb-16 md:px-6 mx-auto w-[80%] min-h-screen sm:max-w-[400px] lg:max-w-[500px] mt-6 sm:mt-10 md:mt-14 lg:mt-16">
       <article className="prose prose-gray mx-auto">
         <div className="space-y-4 not-prose">
           <h1 className="text-2xl font-extrabold tracking-tight lg:text-3xl mb-4 sm:mb-10">
