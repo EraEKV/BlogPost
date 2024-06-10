@@ -14,9 +14,8 @@ interface AuthProviderProps {
   children: ReactNode;
 }
 
-
 export const AuthProvider = ({ children }: AuthProviderProps) => {
-  const [token, setToken] = useState<string | null>(sessionStorage.getItem('token'));
+  const [token, setToken] = useState<string | null>(localStorage.getItem('token'));
   const [error, setError] = useState<string | null>(null);
 
   const login = async (username: string, password: string) => {
@@ -30,7 +29,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
       if (response.ok) {
         setToken(data.token);
-        sessionStorage.setItem('token', data.token);
+        localStorage.setItem('token', data.token);
         setError(null);
       } else {
         setError('Invalid credentials');
@@ -46,5 +45,3 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     </AuthContext.Provider>
   );
 };
-
-

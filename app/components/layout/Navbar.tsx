@@ -24,8 +24,8 @@ const Navbar = () => {
   };
 
   const handleLogout = () => {
-    if (typeof window !== "undefined" && typeof sessionStorage !== "undefined") {
-      sessionStorage.removeItem('token');
+    if (typeof window !== "undefined" && typeof localStorage !== "undefined") {
+      localStorage.removeItem('token');
       setToken(null);
     }
   };
