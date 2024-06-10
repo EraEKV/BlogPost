@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import router from 'next/router';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,8 +10,8 @@ const Navbar = () => {
   const [token, setToken] = useState<string | null>(null);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && typeof sessionStorage !== "undefined") {
-      const storedToken = sessionStorage.getItem('token');
+    if (typeof window !== "undefined" && typeof localStorage !== "undefined") {
+      const storedToken = localStorage.getItem('token');
       setToken(storedToken);
     }
   }, []);
@@ -28,6 +29,7 @@ const Navbar = () => {
       localStorage.removeItem('token');
       setToken(null);
     }
+    router.push('/login');
   };
 
   return (
